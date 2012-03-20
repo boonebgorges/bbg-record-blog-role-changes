@@ -50,7 +50,7 @@ class BBG_RBRC {
 			user_id bigint(20) NOT NULL,
 			blog_id bigint(20) NOT NULL,
 			loggedin_user_id bigint(20) NOT NULL,
-			group_id bigint(20) NOT NULL,
+			group_id bigint(20) NOT NULL DEFAULT 0,
 			url varchar(75) NOT NULL,
 			role_from varchar(75) NOT NULL,
 			role_to varchar(75) NOT NULL,
@@ -114,8 +114,11 @@ class BBG_RBRC {
 		$schema = is_ssl() ? 'https://' : 'http://';
 		$url = $schema . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		
-		$group_id = (int) bp_get_current_group_id();
-		$role_from = $this->role_from;
+        $group_id = 0;
+		if (defined('BP_VERSION'))
+            $group_id = (int) bp_get_current_group_id();
+		
+        $role_from = $this->role_from;
 
 		// $role_to is in [role] => 1 format
 		$role_to = array_pop( array_keys( $role_to ) );
@@ -151,4 +154,10 @@ class BBG_RBRC {
 }
 new BBG_RBRC;
 
+// need this to prevent errors if the code is working on a site without BuddyPress
+if ( !function_exists('bp_get_current_group_id') ){
+    function bp_get_current_group_id(){
+        return 0;
+    }
+}
 ?>
