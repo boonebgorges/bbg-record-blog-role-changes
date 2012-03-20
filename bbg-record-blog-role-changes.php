@@ -30,7 +30,7 @@ class BBG_RBRC {
 	 * Installation
 	 *
 	 * To run this, visit the Dashboard as an admin, and add URL param
-	 *    ?cac_action=install_blog_role_recorder
+	 *    ?bbg_action=install_blog_role_recorder
 	 */
 	function install() {
 		global $wpdb;
@@ -39,7 +39,7 @@ class BBG_RBRC {
 			return;
 		}
 		
-		if ( empty( $_GET['cac_action'] ) || 'install_blog_role_recorder' != $_GET['bbg_action'] ) {
+		if ( empty( $_GET['bbg_action'] ) || 'install_blog_role_recorder' != $_GET['bbg_action'] ) {
 			return;
 		}
 				
