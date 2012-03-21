@@ -35,7 +35,8 @@ class BBG_RBRC {
         // install routine
         if($this->rbrc_options['installed'] !== true)
             add_action( 'admin_init', array( &$this, 'install' ) );
-    
+        
+        // admin area
         if (is_admin()){
             add_action( 'admin_init', array( &$this, 'admin_init' ) );
         }
@@ -48,10 +49,11 @@ class BBG_RBRC {
     }
     
     function admin_init(){
-        add_management_page(
+        add_submenu_page(
+            'tools.php',
             __('BBG Record Blog Role Changes', 'rbrc'),
             __('Blog Role Changes', 'rbrc'),
-            is_multisite() ? 'manage_network_options' : 'manage_options',
+            'edit_users',
             'rbrc-admin', 
             array(&$this, 'rbrc_admin'));
     }
@@ -195,7 +197,7 @@ class BBG_RBRC {
 }
 
 // BP Abstraction
-add_action('plugins_loaded', 'rbrc_init', 99);
+add_action('plugins_loaded', 'rbrc_init', 20);
 function rbrc_init(){
     include dirname(__FILE__).'/bbg-bp-abstraction.php';
     new BBG_RBRC;
