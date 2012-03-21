@@ -4,7 +4,7 @@ Plugin Name: BBG Record Blog Role Changes
 Plugin URI: http://teleogistic.net/2012/03/record-user-role-changes-across-a-wordpress-network-for-troubleshooting/
 Description: Plugin will record all changes in user blog roles (wp_x_capabalities usermeta) across an entire WordPress installation.
 Author: boonebgorges, slaFFik
-Version: 0.2
+Version: 0.3
 Author URI: http://boone.gorg.es/
 License: GPLv2
 */
@@ -13,6 +13,7 @@ register_activation_hook( __FILE__, 'rbrc_activation');
 function rbrc_activation(){
     $rbrc = array();
     
+    // install on activation
     $rbrc['installed'] = BBG_RBRC::install();
     
     add_option('rbrc_options', $rbrc, '', 'yes');
@@ -35,11 +36,28 @@ class BBG_RBRC {
         if($this->rbrc_options['installed'] !== true)
             add_action( 'admin_init', array( &$this, 'install' ) );
     
+        if (is_admin()){
+            add_action( 'admin_init', array( &$this, 'admin_init' ) );
+        }
+    
         // Before usermeta is changed, get the old role
         add_action( 'update_user_meta', array( &$this, 'catch_role_from' ), 10, 4 );
     
         // record new instances
         add_action( 'updated_user_meta', array( &$this, 'record' ), 10, 4 );
+    }
+    
+    function admin_init(){
+        add_management_page(
+            __('BBG Record Blog Role Changes', 'rbrc'),
+            __('Blog Role Changes', 'rbrc'),
+            is_multisite() ? 'manage_network_options' : 'manage_options',
+            'rbrc-admin', 
+            array(&$this, 'rbrc_admin'));
+    }
+    
+    function rbrc_admin(){
+        echo '<h2>' . __( 'Blog Role Changes Data', 'rbrc' ) . '</h2>';
     }
     
     /**
@@ -55,7 +73,6 @@ class BBG_RBRC {
         $rbrc_options = get_option('rbrc_options');
         if($rbrc_options['installed'] === true)
             return true;
-        
         
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         
@@ -176,12 +193,12 @@ class BBG_RBRC {
     }
 
 }
-new BBG_RBRC;
 
+// BP Abstraction
 add_action('plugins_loaded', 'rbrc_init', 99);
 function rbrc_init(){
     include dirname(__FILE__).'/bbg-bp-abstraction.php';
+    new BBG_RBRC;
 }
-    
 
 ?>
