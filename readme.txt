@@ -23,6 +23,7 @@ Visit [Boone's page](http://teleogistic.net/2012/03/record-user-role-changes-acr
 
 = 0.3 =
 * Added admin page to look the data in dashboard
+* Fixed regex for sniffing out blog_ids
 
 = 0.2 =
 * Made the code as a WP plugin
