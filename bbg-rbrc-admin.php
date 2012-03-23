@@ -26,7 +26,7 @@ function rbrc_admin(){
         screen_icon('tools');
     
         echo '<h2>';
-            _e('Blog Roles Changes Data','rbrc');
+            _e('Blog Roles Changes','rbrc');
             echo '<a href="'.$_SERVER['REQUEST_URI'].'&action=emptyMe" class="add-new-h2" style="color:red" onClick="return confirm(\''.__('Are you sure you want to delete all records about changes roles anywhere to anyone?', 'rbrc').'\') ? true : false;">'.__('Delete all records', 'rbrc').'</a>';
         echo '</h2>';
 

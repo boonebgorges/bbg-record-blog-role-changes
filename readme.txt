@@ -19,6 +19,10 @@ Visit [Boone's page](http://teleogistic.net/2012/03/record-user-role-changes-acr
 1. Activate it through the 'Plugins' menu in WordPress
 1. That's all.
 
+== Screenshots ==
+
+1. Admin page
+
 == Changelog ==
 
 = 0.4 =
