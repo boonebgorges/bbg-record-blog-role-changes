@@ -1,11 +1,19 @@
 <?php
 // Actually - add the menu...
-add_action( 'admin_menu', 'rbrc_add_menu' );
+if(is_multisite()){
+    add_action( 'network_admin_menu', 'rbrc_add_menu' );
+}else{
+    add_action( 'admin_menu', 'rbrc_add_menu' );
+}
 function rbrc_add_menu(){
+    $file = 'tools.php';
+    if(is_multisite()){
+        $file = 'users.php';
+    }
     add_submenu_page(
-        'tools.php',
-        __('BBG Record Blog Role Changes', 'rbrc'),
-        __('Blog Role Changes', 'rbrc'),
+        $file,
+        __('BBG Record Blog Roles Changes', 'rbrc'),
+        __('Blog Roles Changes', 'rbrc'),
         'edit_users',
         'rbrc-admin',
         'rbrc_admin' )
@@ -18,7 +26,7 @@ function rbrc_admin(){
         screen_icon('tools');
     
         echo '<h2>';
-            _e('Blog Role Changes Data','rbrc');
+            _e('Blog Roles Changes Data','rbrc');
         echo '</h2>';
 
         echo '<form id="brc-form" method="post">';
@@ -45,8 +53,8 @@ class BRC_List_Table extends WP_List_Table {
 	 */
 	function __construct() {
 		parent::__construct( array(
-            'singular' => 'blog_role_change', //Singular label
-            'plural'   => 'blog_role_changes', //plural label, also this well be one of the table css class
+            'singular' => 'blog_roles_change', //Singular label
+            'plural'   => 'blog_roles_changes', //plural label, also this well be one of the table css class
             'ajax'	   => false
 		) );
 	}
@@ -67,7 +75,7 @@ class BRC_List_Table extends WP_List_Table {
         }
         $columns['url']          = __('Url', 'rbrc');
         $columns['roles']        = __('Roles (from->to)', 'rbrc');
-        $columns['date']         = __('Date');
+        $columns['date']         = __('Date', 'rbrc');
 
         return $columns;
     }

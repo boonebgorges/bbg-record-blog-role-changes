@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: BBG Record Blog Role Changes
+Plugin Name: BBG Record Blog Roles Changes
 Plugin URI: http://teleogistic.net/2012/03/record-user-role-changes-across-a-wordpress-network-for-troubleshooting/
 Description: Plugin will record all changes in user blog roles (wp_x_capabalities usermeta) across an entire WordPress installation.
 Author: boonebgorges, slaFFik
-Version: 0.3
+Version: 0.4
 Author URI: http://boone.gorg.es/
 License: GPLv2
 */
@@ -154,7 +154,7 @@ class BBG_RBRC {
             
         $role_to = array_pop( array_keys( $role_to ) );
 
-        $date = date( 'Y-m-d h:i:s' );
+        $date = date( 'Y-m-d H:i:s' );
 
         $sql = $wpdb->prepare(
             "INSERT INTO {$wpdb->bbg_rbrc_table} (
