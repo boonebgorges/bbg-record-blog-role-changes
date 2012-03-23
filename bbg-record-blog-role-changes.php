@@ -95,12 +95,12 @@ class BBG_RBRC {
     function get_blog_id_from_cap_key( $meta_key ) {
         global $wpdb;
         
-        $pattern = '/' . $wpdb->base_prefix . '([0-9+?])_capabilities/'; 
+        $pattern = '#' . $wpdb->base_prefix . '([0-9]+?)_capabilities#'; 
         preg_match( $pattern, $meta_key, $matches );
         
         $blog_id = isset( $matches[1] ) ? (int) $matches[1] : 0;
         
-        if(!is_multisite() && $blog_id == 0)
+        if ( !is_multisite() && $blog_id == 0 )
             $blog_id = 1;
 
         return $blog_id;
@@ -131,7 +131,7 @@ class BBG_RBRC {
      */
     function record( $meta_id, $user_id, $meta_key, $role_to ) {
         global $wpdb;
-
+        
         if ( !$blog_id = $this->get_blog_id_from_cap_key( $meta_key ) ) {
             return NULL;
         }
