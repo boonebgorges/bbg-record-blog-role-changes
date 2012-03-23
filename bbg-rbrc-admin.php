@@ -34,9 +34,9 @@ function rbrc_admin(){
             global $wpdb;
             $deleted = $wpdb->query($wpdb->prepare('TRUNCATE '.$wpdb->bbg_rbrc_table));
             if($deleted)
-                echo '<div class="updated" id="message"><p>All records were successfully deleted.</p></div>';
+                echo '<div class="updated" id="message"><p>'.__('All records were successfully deleted.', 'rbrc').'</p></div>';
             else
-                echo '<div class="error" id="message"><p>There was an error deleting all records.</p></div>';
+                echo '<div class="error" id="message"><p>'.__('There was an error while deleting all records.', 'rbrc').'</p></div>';
         }
         
         echo '<form id="brc-form" method="post">';

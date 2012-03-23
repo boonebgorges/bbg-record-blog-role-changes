@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BBG Record Blog Role Changes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-24 00:24+0200\n"
-"PO-Revision-Date: 2012-03-24 00:24+0200\n"
+"POT-Creation-Date: 2012-03-24 00:39+0200\n"
+"PO-Revision-Date: 2012-03-24 00:39+0200\n"
 "Last-Translator: slaFFik <slaffik@list.ru>\n"
 "Language-Team: slaFFik\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,8 @@ msgid "BBG Record Blog Roles Changes"
 msgstr ""
 
 #: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:16
-msgid "Blog Roles Changes"
-msgstr ""
-
 #: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:29
-msgid "Blog Roles Changes Data"
+msgid "Blog Roles Changes"
 msgstr ""
 
 #: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:30
@@ -31,6 +28,14 @@ msgstr ""
 
 #: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:30
 msgid "Delete all records"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:37
+msgid "All records were successfully deleted."
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:39
+msgid "There was an error while deleting all records."
 msgstr ""
 
 #: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:79
