@@ -23,7 +23,8 @@ Visit [Boone's page](http://teleogistic.net/2012/03/record-user-role-changes-acr
 
 = 0.4 =
 * Move admin page to Network admin area (under Users menu) (if MS is activated, otherwise - under Tools)
-* SOme other minor code changes
+* "Delete all records" button in admin area (be careful with it!)
+* Some other minor code changes
 
 = 0.3 =
 * Added admin page to look the data in dashboard

@@ -27,8 +27,18 @@ function rbrc_admin(){
     
         echo '<h2>';
             _e('Blog Roles Changes Data','rbrc');
+            echo '<a href="'.$_SERVER['REQUEST_URI'].'&action=emptyMe" class="add-new-h2" style="color:red" onClick="return confirm(\''.__('Are you sure you want to delete all records about changes roles anywhere to anyone?', 'rbrc').'\') ? true : false;">'.__('Delete all records', 'rbrc').'</a>';
         echo '</h2>';
 
+        if(isset($_GET['action']) && $_GET['action'] == 'emptyMe'){
+            global $wpdb;
+            $deleted = $wpdb->query($wpdb->prepare('TRUNCATE '.$wpdb->bbg_rbrc_table));
+            if($deleted)
+                echo '<div class="updated" id="message"><p>All records were successfully deleted.</p></div>';
+            else
+                echo '<div class="error" id="message"><p>There was an error deleting all records.</p></div>';
+        }
+        
         echo '<form id="brc-form" method="post">';
             //Prepare Table of elements
             $brc_list_table = new BRC_List_Table();

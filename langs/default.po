@@ -2,58 +2,66 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BBG Record Blog Role Changes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-24 00:01+0200\n"
-"PO-Revision-Date: 2012-03-24 00:01+0200\n"
+"POT-Creation-Date: 2012-03-24 00:24+0200\n"
+"PO-Revision-Date: 2012-03-24 00:24+0200\n"
 "Last-Translator: slaFFik <slaffik@list.ru>\n"
 "Language-Team: slaFFik\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: W:\\_server\\home\\ovi\\ab\\wp-content\\plugins\\bbg-record-blog-role-changes\n"
-"X-Poedit-SearchPath-0: W:\\_server\\home\\ovi\\ab\\wp-content\\plugins\\bbg-record-blog-role-changes\n"
+"X-Poedit-Basepath: W:\\_server\\home\\ovi\\ab\\wp-content\\plugins\\bbg-record-blog-roles-changes\n"
+"X-Poedit-SearchPath-0: W:\\_server\\home\\ovi\\ab\\wp-content\\plugins\\bbg-record-blog-roles-changes\n"
 
-#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-role-changes/bbg-rbrc-admin.php:15
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:15
 msgid "BBG Record Blog Roles Changes"
 msgstr ""
 
-#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-role-changes/bbg-rbrc-admin.php:16
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:16
 msgid "Blog Roles Changes"
 msgstr ""
 
-#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-role-changes/bbg-rbrc-admin.php:29
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:29
 msgid "Blog Roles Changes Data"
 msgstr ""
 
-#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-role-changes/bbg-rbrc-admin.php:69
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:30
+msgid "Are you sure you want to delete all records about changes roles anywhere to anyone?"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:30
+msgid "Delete all records"
+msgstr ""
+
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:79
 msgid "User Affected"
 msgstr ""
 
-#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-role-changes/bbg-rbrc-admin.php:70
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:80
 msgid "User Initiator"
 msgstr ""
 
-#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-role-changes/bbg-rbrc-admin.php:71
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:81
 msgid "Site"
 msgstr ""
 
-#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-role-changes/bbg-rbrc-admin.php:74
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:84
 msgid "Group Name"
 msgstr ""
 
-#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-role-changes/bbg-rbrc-admin.php:76
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:86
 msgid "Url"
 msgstr ""
 
-#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-role-changes/bbg-rbrc-admin.php:77
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:87
 msgid "Roles (from->to)"
 msgstr ""
 
-#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-role-changes/bbg-rbrc-admin.php:78
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:88
 msgid "Date"
 msgstr ""
 
-#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-role-changes/bbg-rbrc-admin.php:104
+#: W:\_server\home\ovi\ab\wp-content\plugins\bbg-record-blog-roles-changes/bbg-rbrc-admin.php:114
 msgid "Delete"
 msgstr ""
 
